@@ -15,6 +15,8 @@
 		likeDiv.classList.add('like');
 		likeDiv.innerHTML = '<i class="fas fa-heart"></i>';
 		d.body.appendChild(likeDiv);
+	
+		
 		likeArr.push({
 			el:likeDiv,
 			top:e.clientY - 20,
