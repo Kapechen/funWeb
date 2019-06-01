@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加载条样式1</title>
+</head>
+<style type="text/css">
+    :root{
+        background: #333333;
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .middle{
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+    .bar{
+        display: inline-block;
+        padding: 0;
+        margin: 0.1px;
+        width: 5px;
+        height: 50px;
+        transform-origin: bottom center;
+        animation: loading 1.5s ease-in-out infinite;
+    }
+    .middle > p{
+        font-size: 18px;
+        letter-spacing: 2px;
+        animation: setColor 1.5s ease-in-out infinite;
+    }
+    @keyframes setColor {
+        0%{color: transparent;}50%{color: #00ffea;}100%{color: transparent;}
+    }
+    .bar1{
+        animation-delay: 0.1s;
+    }
+    .bar2{
+        animation-delay: 0.2s;
+    }
+    .bar3{
+        animation-delay: 0.3s;
+    }
+    .bar4{
+        animation-delay: 0.4s;
+    }
+    .bar5{
+        animation-delay: 0.5s;
+    }
+    .bar6{
+        animation-delay: 0.6s;
+    }
+    .bar7{
+        animation-delay: 0.7s;
+    }
+    .bar8{
+        animation-delay: 0.8s;
+    }
+
+    @keyframes loading {
+        0%{
+            transform: scaleY(0.1);
+            background: #CCCCCC;
+        }
+        50%{
+            transform: scaleY(1);
+            background: #00ffea;
+        }100% {
+             transform: scaleY(0);
+             background: transparent;
+         }
+    }
+</style>
+<body>
+    <div class="middle">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+        <div class="bar bar4"></div>
+        <div class="bar bar5"></div>
+        <div class="bar bar6"></div>
+        <div class="bar bar7"></div>
+        <div class="bar bar8"></div>
+        <p>加载中...</p>
+    </div>
+</body>
+</html>
