@@ -1,4 +1,6 @@
-(function(w,d){
+
+
+	(function(w,d){
 		d.querySelector('body').addEventListener('click',function(e){
 		addLike(e);
 	});
@@ -48,3 +50,10 @@
 		w.requestAnimationFrame(moveLike);
 	}
 })(window,document);
+
+
+
+
+
+
+
